@@ -1,0 +1,16 @@
+@mixin controll-cyrcle-button($size, $bg-color) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: $size;
+	height: $size;
+	border-radius: 50%;
+	background-color: $bg-color;
+	border: none;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+}
