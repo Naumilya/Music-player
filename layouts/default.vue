@@ -1,9 +1,17 @@
 <template>
-	<header></header>
+	<header>
+		<div class="container">
+			<BaseCurrentTrack />
+		</div>
+	</header>
 	<div>
-		<slot />
+		<div class="container">
+			<slot />
+		</div>
 	</div>
-	<footer>Made by fanadape🍕</footer>
+	<footer>
+		<div class="container">Made by fanadape🍕</div>
+	</footer>
 </template>
 
 <script lang="ts" setup></script>
