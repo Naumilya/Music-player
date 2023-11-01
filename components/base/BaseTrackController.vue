@@ -4,14 +4,18 @@
 			<button class="track-player__previous">
 				<i class="material-icons"> skip_previous </i>
 			</button>
-			<button class="track-player__play">
-				<i class="material-icons material-icons_black"> play_arrow </i>
+			<button class="track-player__play" @click="isPlaying = !isPlaying">
+				<i class="material-icons material-icons_black" v-if="!isPlaying">
+					play_arrow
+				</i>
+				<i class="material-icons material-icons_black" v-else> pause </i>
 			</button>
 			<button class="track-player__next">
 				<i class="material-icons"> skip_next </i>
 			</button>
-			<button class="track-player__mute">
-				<i class="material-icons"> volume_up </i>
+			<button class="track-player__mute" @click="isVolume = !isVolume">
+				<i class="material-icons" v-if="!isVolume"> volume_up </i>
+				<i class="material-icons" v-else> volume_down </i>
 			</button>
 			<button class="track-player__more-vert">
 				<i class="material-icons"> more_vert </i>
@@ -24,7 +28,10 @@
 	</div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const isPlaying = ref(false);
+const isVolume = ref(false);
+</script>
 
 <style scoped lang="scss">
 @use '@/assets/scss/_mixins.scss';
