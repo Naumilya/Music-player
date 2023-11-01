@@ -5,7 +5,7 @@
 				<i class="material-icons"> skip_previous </i>
 			</button>
 			<button class="track-player__play">
-				<i class="material-icons"> play_arrow </i>
+				<i class="material-icons material-icons_black"> play_arrow </i>
 			</button>
 			<button class="track-player__next">
 				<i class="material-icons"> skip_next </i>
@@ -40,7 +40,7 @@
 		@include mixins.controll-cyrcle-button(24px, transparent);
 	}
 	&__play {
-		@include mixins.controll-cyrcle-button(32px, colors.$primary-color);
+		@include mixins.controll-cyrcle-button(38px, colors.$primary-color);
 	}
 	&__next {
 		@include mixins.controll-cyrcle-button(24px, transparent);
@@ -57,6 +57,10 @@
 	&__duration {
 	}
 	&__progress-bar {
+	}
+
+	.material-icons_black {
+		color: colors.$black-color;
 	}
 }
 </style>
